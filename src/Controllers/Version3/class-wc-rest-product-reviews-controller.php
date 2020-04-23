@@ -465,6 +465,7 @@ class WC_REST_Product_Reviews_Controller extends WC_REST_Controller {
 		}
 
 		update_comment_meta( $review_id, 'rating', ! empty( $request['rating'] ) ? $request['rating'] : '0' );
+		update_comment_meta( $review_id, 'verified', ! empty( $request['verified'] ) ? $request['verified'] : '0' );
 
 		$review = get_comment( $review_id );
 
